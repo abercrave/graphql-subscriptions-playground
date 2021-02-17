@@ -1,0 +1,45 @@
+module.exports = `
+  type Post {
+    id: ID!
+    title: String!
+    subtitle: String!
+    body: String!
+    published: Boolean!
+    author: String!
+    upvotes: Int!
+    downvotes: Int!
+    commentCount: Int!
+  }
+
+  input PostInput {
+    id: ID!
+    title: String!
+    subtitle: String!
+    body: String!
+    published: Boolean!
+    author: String!
+    upvotes: Int!
+    downvotes: Int!
+    commentCount: Int!
+  }
+  
+  type Query {
+    post(id: ID): Post
+    posts: [Post!]!
+  }
+
+  type Mutation {
+    createPost(input: PostInput!): Post!
+    deletePost(id: ID!): Post!
+    updatePost(input: PostInput!): Post!
+  }
+
+  type Subscription {
+    post: SubscriptionPayload!
+  }
+
+  type SubscriptionPayload {
+    mutation: String!
+    data: Post
+  }
+`

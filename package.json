@@ -1,0 +1,26 @@
+{
+  "name": "graphql-sub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.4.0",
+    "graphql-playground-middleware-express": "^1.7.22",
+    "graphql-subscriptions": "^1.1.0",
+    "graphql-tools": "^7.0.2",
+    "subscriptions-transport-ws": "^0.9.18"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
